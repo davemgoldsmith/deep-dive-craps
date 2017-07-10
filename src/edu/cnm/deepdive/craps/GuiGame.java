@@ -30,7 +30,7 @@ public class GuiGame {
 		frame = new JFrame("Simple Time-Wasting Craps Game");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		dieFaces = new ImageIcon[6];
-		for (int i =0; i < 6; i++){
+		for (int i = 0; i < 6; i++) {
 			dieFaces[i] = createImageIcon("images/" + (i + 1) + ".png");
 		}
 
@@ -60,12 +60,12 @@ public class GuiGame {
 		croupier.setDisplay(new StateMachine.Display() {
 			@Override
 			public void update(int[] roll) {
-			
+
 				roll1.setIcon(dieFaces[roll[0] - 1]);
 				roll2.setIcon(dieFaces[roll[1] - 1]);
-				
+
 			}
-				
+
 		});
 
 		croupier.setPlayable(new StateMachine.Playable() {
